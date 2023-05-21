@@ -15,7 +15,9 @@ public class Task4 {
         System.out.println(Arrays.stream(arr).min());
         System.out.println("******************************************************");
 
+        System.out.println("Мінімальне значення з 3х чисел");
         System.out.println(minNumber(a, b, c));
+        System.out.println("Максимальне значення з 3х чисел");
         System.out.println(maxNumber(a, b, c));
 
     }
@@ -30,8 +32,9 @@ public class Task4 {
         System.out.println(Arrays.stream(arr).min());
         System.out.println("******************************************************");
 
-
+        System.out.println("Мінімальне значення з 4х чисел");
         System.out.println(minNumber(a, b, c, d));
+        System.out.println("Максимальне значення з 4х чисел");
         System.out.println(maxNumber(a, b, c, d));
     }
 
@@ -44,7 +47,9 @@ public class Task4 {
         System.out.println(Arrays.stream(arr).min());
         System.out.println("******************************************************");
 
+        System.out.println("Мінімальне значення з 5х чисел");
         System.out.println(minNumber(a, b, c, d, e));
+        System.out.println("Максимальне значення з 5х чисел");
         System.out.println(maxNumber(a, b, c, d, e));
     }
 
@@ -94,10 +99,9 @@ public class Task4 {
 //            System.out.println("Заповнено " + i + "й елемент масиву.");
 //        }
 
-        overloaded(4,6,1);
-        overloaded(89,76,112,61);
-        overloaded(92,5,124,82,8);
-
+        overloaded(4, 6, 1);
+        overloaded(89, 76, 112, 61);
+        overloaded(92, 5, 124, 82, 8);
 
 
 //        overloaded(array[0], array[1], array[2]);

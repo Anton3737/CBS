@@ -31,35 +31,33 @@ public class CalculatorClassForRew {
 
             case "+":  // наша умова при якій має спрацьовувати необхідна операція
                 double resAdd = operandOne + operandTwo;   // сама операція
-                System.out.println(operandOne + " + " + operandTwo + " = " + resAdd); // вивід результату операції
                 break;
 
             case "-":
                 double resSub = operandOne - operandTwo;
-                System.out.println(operandOne + " - " + operandTwo + " = " + resSub);
                 break;
 
             case "/":
                 // при умові ділення необхідно зформувати конструкцію для перевірки умови ділення на 0
                 if (operandTwo != 0) {
                     double resDiv = operandOne / operandTwo;
-                    System.out.println(operandOne + " / " + operandTwo + " = " + resDiv);
                     break;
                 } else {
                     System.out.println(ANSI_RED + "Вай мееее ґенацвале, на нуль ділити не можна !!!" + ANSI_RESET);
-                    break;
+                    return;
                 }
 
             case "*":
                 double resMul = operandOne * operandTwo;
-                System.out.println(operandOne + " * " + operandTwo + " = " + resMul);
                 break;
-
+                
             default:
                 System.out.println(ANSI_RED + "Ви не ввели жодного з описаних операторів або ввели не відповідні умові символи що призвело до закінчення програми" +
                         "\n" +
                         "----------------------------------------------------ОБПИБКА------------------------------------------------------" + ANSI_RESET);
+                return;
         }
+        System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resAdd); // вивід результату операції
     }
 }
 

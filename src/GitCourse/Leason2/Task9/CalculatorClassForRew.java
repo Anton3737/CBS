@@ -31,16 +31,22 @@ public class CalculatorClassForRew {
 
             case "+":  // наша умова при якій має спрацьовувати необхідна операція
                 double resAdd = operandOne + operandTwo;   // сама операція
+                // Ганіна К., покращення:
+                // System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resAdd);
                 break;
 
             case "-":
                 double resSub = operandOne - operandTwo;
+                // Ганіна К., покращення:
+                // System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resSub);
                 break;
 
             case "/":
                 // при умові ділення необхідно зформувати конструкцію для перевірки умови ділення на 0
                 if (operandTwo != 0) {
                     double resDiv = operandOne / operandTwo;
+                    // Ганіна К., покращення:
+                    // System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resDiv);
                     break;
                 } else {
                     System.out.println(ANSI_RED + "Вай мееее ґенацвале, на нуль ділити не можна !!!" + ANSI_RESET);
@@ -49,6 +55,8 @@ public class CalculatorClassForRew {
 
             case "*":
                 double resMul = operandOne * operandTwo;
+                // Ганіна К., покращення:
+                // System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resMul);
                 break;
                 
             default:
@@ -57,6 +65,10 @@ public class CalculatorClassForRew {
                         "----------------------------------------------------ОБПИБКА------------------------------------------------------" + ANSI_RESET);
                 return;
         }
+        /*
+        *Ганіна К.: видає помилку на рядку 72 через змінну resAdd
+        *покращення: прибрати ряд 72 та написати команду виводу результату в case
+        */
         System.out.println(operandOne + " " + operator + " " + operandTwo + " = " + resAdd); // вивід результату операції
     }
 }

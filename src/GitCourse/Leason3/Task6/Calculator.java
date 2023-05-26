@@ -36,10 +36,13 @@ public class Calculator {
                     System.out.println(operandOne + " / " + operandTwo + " = " + resDiv);
                     break;
                 } else {
-                    // необхідно сторити повідомлення помилки ділення на НУЛЬ
+                    System.out.println("На НУЛЬ ділити не можна!");
                     break;
                 }
-                // необхідно дописати кейс множення *
+            case "*":
+                double resMul = operandOne * operandTwo;
+                System.out.println(operandOne + " * " + operandTwo + " = " + resMul);
+                break;
             default:
                 System.out.println(ANSI_RED + "Ви не ввели жодного з описаних операторів або ввели не відповідні умові символи що призвело до закінчення програми" +
                         "\n" +

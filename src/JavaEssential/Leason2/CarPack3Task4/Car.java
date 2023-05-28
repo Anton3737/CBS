@@ -34,9 +34,12 @@ public class Car {
 
     public static void main(String[] args) {
 
-
-
-
+        Car a = new Car();
+        Car b = new Car();
+        Car c = new Car();
+        Car d = new Car();
+        Car e = new Car();
+        Car f = new Car();
 
     }
 }

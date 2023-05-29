@@ -1,24 +1,12 @@
 package JavaEssential.Leason1.Book;
 
-import java.awt.print.Book;
-
 public class Content extends Book {
-    private String contentOfBook;
 
-    public Content(String contentOfBook) {
-        this.contentOfBook = contentOfBook;
+    public Content(String titleOfBook, String contentOfBook, String authorOfBook) {
+        super(titleOfBook, contentOfBook, authorOfBook);
     }
 
-    public String getContentOfBook() {
-        return contentOfBook;
+    static void show() {
+        System.out.println();
     }
-
-    public void setContentOfBook(String contentOfBook) {
-        this.contentOfBook = contentOfBook;
-    }
-
-    void show() {
-        System.out.println(contentOfBook);
-    }
-
 }

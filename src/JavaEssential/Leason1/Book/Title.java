@@ -1,25 +1,14 @@
 package JavaEssential.Leason1.Book;
 
-import java.awt.print.Book;
-
 public class Title extends Book {
 
-    private String titleOfBook;
 
-    public Title(String titleOfBook) {
-        this.titleOfBook = titleOfBook;
+    public Title(String titleOfBook, String contentOfBook, String authorOfBook) {
+        super(titleOfBook, contentOfBook, authorOfBook);
     }
 
-    public String getTitleOfBook() {
-        return titleOfBook;
-    }
+    static void show() {
 
-    public void setTitleOfBook(String titleOfBook) {
-        this.titleOfBook = titleOfBook;
-    }
-
-    void show() {
-        System.out.println(titleOfBook);
     }
 
 }

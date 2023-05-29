@@ -1,24 +1,12 @@
 package JavaEssential.Leason1.Book;
 
-import java.awt.print.Book;
-
 public class Author extends Book {
-    private String authorOfBook;
 
-    public Author(String authorOfBook) {
-        this.authorOfBook = authorOfBook;
+    public Author(String titleOfBook, String contentOfBook, String authorOfBook) {
+        super(titleOfBook, contentOfBook, authorOfBook);
     }
 
-    public String getAuthorOfBook() {
-        return authorOfBook;
+    static void show() {
+        System.out.println();
     }
-
-    public void setAuthorOfBook(String authorOfBook) {
-        this.authorOfBook = authorOfBook;
-    }
-
-    void show() {
-        System.out.println(authorOfBook);
-    }
-
 }

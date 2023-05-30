@@ -2,18 +2,18 @@ package JavaEssential.Leason1.Book;
 
 public class Title {
 
-    private String authorOfBook;
+    private String titleOfBook;
 
     public Title() {
-        this.authorOfBook = authorOfBook;
+        this.titleOfBook = titleOfBook;
     }
 
-    public String getAuthorOfBook() {
-        return authorOfBook;
+    public String getTitleOfBook() {
+        return titleOfBook;
     }
 
-    public void setAuthorOfBook(String authorOfBook) {
-        this.authorOfBook = authorOfBook;
+    public void setTitleOfBook(String titleOfBook) {
+        this.titleOfBook = titleOfBook;
     }
 
     static void show() {

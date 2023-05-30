@@ -10,18 +10,22 @@ public class Book {
 
 
     public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        Book BookTitle = new Book();
+        System.out.println("Введіть назву книжки");
+        Title BookTitle = new Title();
+        BookTitle.setTitleOfBook(sc.nextLine());
+        System.out.println("Введіть автора тексту");
+        Author BookAuthor = new Author();
+        BookAuthor.setAuthorOfBook(sc.nextLine());
+        System.out.println("Введіть контент");
+        Content BookContent = new Content();
+        BookContent.setContentOfBook(sc.nextLine());
 
 
-//
-//        System.out.println("Введіть назву книжки");
-//        Book BookTitle = new Title();
-//        System.out.println("Введіть автора тексту");
-//        Book BookAuthor = new Author();
-//        System.out.println("Введіть контент");
-//        Book BookContent = new Content();
+        System.out.println(BookTitle.getTitleOfBook());
+        System.out.println(BookAuthor.getAuthorOfBook());
+        System.out.println(BookContent.getContentOfBook());
 
     }
 }

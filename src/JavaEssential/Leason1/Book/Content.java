@@ -4,7 +4,7 @@ public class Content {
 
     private String contentOfBook;
 
-    public Content(String contentOfBook) {
+    public Content() {
         this.contentOfBook = contentOfBook;
     }
 

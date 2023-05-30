@@ -8,6 +8,39 @@ public class Book {
     Book Title;
     Book Content;
 
+    public Book(Book author, Book title, Book content) {
+        Author = author;
+        Title = title;
+        Content = content;
+    }
+
+    public Book() {
+
+    }
+
+    public void setAuthor(Book author) {
+        Author = author;
+    }
+
+    public void setTitle(Book title) {
+        Title = title;
+    }
+
+    public void setContent(Book content) {
+        Content = content;
+    }
+
+    public Book getAuthor() {
+        return Author;
+    }
+
+    public Book getTitle() {
+        return Title;
+    }
+
+    public Book getContent() {
+        return Content;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -23,9 +56,16 @@ public class Book {
         BookContent.setContentOfBook(sc.nextLine());
 
 
-        System.out.println(BookTitle.getTitleOfBook());
-        System.out.println(BookAuthor.getAuthorOfBook());
-        System.out.println(BookContent.getContentOfBook());
+        Book Book = new Book();
+        Book.getTitle();
+        Book.getAuthor();
+        Book.getContent();
+
+
+//
+//        System.out.println(BookTitle.getTitleOfBook());
+//        System.out.println(BookAuthor.getAuthorOfBook());
+//        System.out.println(BookContent.getContentOfBook());
 
     }
 }

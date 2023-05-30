@@ -1,9 +1,19 @@
 package JavaEssential.Leason1.Book;
 
-public class Content extends Book {
+public class Content {
 
-    public Content(String titleOfBook, String contentOfBook, String authorOfBook) {
-        super(titleOfBook, contentOfBook, authorOfBook);
+    private String contentOfBook;
+
+    public Content(String contentOfBook) {
+        this.contentOfBook = contentOfBook;
+    }
+
+    public String getContentOfBook() {
+        return contentOfBook;
+    }
+
+    public void setContentOfBook(String contentOfBook) {
+        this.contentOfBook = contentOfBook;
     }
 
     static void show() {

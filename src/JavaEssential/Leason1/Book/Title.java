@@ -1,10 +1,19 @@
 package JavaEssential.Leason1.Book;
 
-public class Title extends Book {
+public class Title {
 
+    private String authorOfBook;
 
-    public Title(String titleOfBook, String contentOfBook, String authorOfBook) {
-        super(titleOfBook, contentOfBook, authorOfBook);
+    public Title() {
+        this.authorOfBook = authorOfBook;
+    }
+
+    public String getAuthorOfBook() {
+        return authorOfBook;
+    }
+
+    public void setAuthorOfBook(String authorOfBook) {
+        this.authorOfBook = authorOfBook;
     }
 
     static void show() {

@@ -13,16 +13,16 @@ public class MyArea {
 
     static void areaOfCircleWithoutConstant(double R) {
 
-        double S = PI * (Math.pow(R, 2));
+        double S = Math.PI * (Math.pow(R, 2));
 
-        System.out.println("Вивід площі кола без використання поля: " + S);
+        System.out.println("Вивід площі кола без використання поля PI: " + S);
     }
 
     static void areaOfCircle(double R) {
 
         double S = PI * (Math.pow(R, 2));
 
-        System.out.println("Вивід площі кола З використання поля PI : " + S);
+        System.out.println("Вивід площі кола З використанням поля PI : " + S);
     }
 
 

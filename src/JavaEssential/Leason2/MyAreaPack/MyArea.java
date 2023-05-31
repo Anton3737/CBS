@@ -1,24 +1,19 @@
 package JavaEssential.Leason2.MyAreaPack;
 
 import java.util.Scanner;
-import java.math.*;
 
-import static java.lang.Math.*;
 
 public class MyArea {
 
 
-    final double Pi;
+    private static final double PI = 3.14D;
 
-    public MyArea(double Pi) {
-        this.Pi = Pi;
+    public MyArea() {
     }
-
-
 
     static void areaOfCircleWithoutConstant(double R) {
 
-        double S = 3.14 * (Math.pow(R, 2));
+        double S = PI * (Math.pow(R, 2));
 
         System.out.println("Вивід площі кола без використання поля: " + S);
     }

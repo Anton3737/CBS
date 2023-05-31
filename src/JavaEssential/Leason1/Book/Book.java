@@ -14,9 +14,9 @@ public class Book {
         Content = content;
     }
 
-    public Book() {
-
-    }
+//    public Book() {
+//
+//    }
 
     public void setAuthor(Book author) {
         Author = author;
@@ -56,10 +56,10 @@ public class Book {
         BookContent.setContentOfBook(sc.nextLine());
 
 
-        Book Book = new Book();
-        Book.getTitle();
-        Book.getAuthor();
-        Book.getContent();
+//        Book Book = new Book();
+//        Book.getTitle();
+//        Book.getAuthor();
+//        Book.getContent();
 
 
 //

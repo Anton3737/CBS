@@ -1,5 +1,7 @@
 package JavaEssential.Leason2.CarPack3Task4;
 
+import java.util.Scanner;
+
 public class Car {
 
     public int year;
@@ -8,6 +10,7 @@ public class Car {
     public String color;
 
     public Car() {
+        this(2023, 360, 1300, "Pink");
     }
 
     public Car(int year) {
@@ -32,14 +35,24 @@ public class Car {
         this.color = color;
     }
 
-    public static void main(String[] args) {
+    @Override
+    public String toString() {
+        return "Car{" +
+                "year=" + year +
+                ", speed=" + speed +
+                ", weight=" + weight +
+                ", color='" + color + '\'' +
+                '}';
+    }
 
-        Car a = new Car();
-        Car b = new Car();
-        Car c = new Car();
-        Car d = new Car();
-        Car e = new Car();
-        Car f = new Car();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        Car ObjectWithout = new Car();
+
+        System.out.println(ObjectWithout);
+
 
     }
 }

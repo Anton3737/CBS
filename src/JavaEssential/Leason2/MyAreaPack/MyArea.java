@@ -3,12 +3,17 @@ package JavaEssential.Leason2.MyAreaPack;
 import java.util.Scanner;
 import java.math.*;
 
-import static java.lang.Math.PI;
+import static java.lang.Math.*;
 
 public class MyArea {
 
 
-    final double Pi = PI;
+    final double Pi;
+
+    public MyArea(double Pi) {
+        this.Pi = Pi;
+    }
+
 
 
     static void areaOfCircleWithoutConstant(double R) {

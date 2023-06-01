@@ -10,7 +10,7 @@ public class Car {
     public String color;
 
     public Car() {
-        this(2023, 360, 1300, "Pink");
+        this(0, 0.0, 0, null);
     }
 
     public Car(int year) {
@@ -48,10 +48,14 @@ public class Car {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
         Car ObjectWithout = new Car();
 
         System.out.println(ObjectWithout);
+
+
+        Car car1 = new Car(2004, 300, 1400, "Blue");
+
+        System.out.println(car1);
 
 
     }

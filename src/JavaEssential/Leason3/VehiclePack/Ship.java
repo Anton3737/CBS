@@ -1,4 +1,4 @@
-package JavaEssential.Leason3.ClassRoomPack.VehiclePack;
+package JavaEssential.Leason3.VehiclePack;
 
 public class Ship extends Vehicle {
     private int Passengers;

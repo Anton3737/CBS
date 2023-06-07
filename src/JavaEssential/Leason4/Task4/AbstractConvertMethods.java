@@ -4,22 +4,22 @@ public abstract class AbstractConvertMethods {
 
 
     //    Цельсієм в Кельвіни
-    abstract double CelsiusToKelvin(double temperature);
+    abstract void CelsiusToKelvin(double temperature);
 
     //    Цельсієм в Фаренгейти
-    abstract double CelsiusToFarinhate(double temperature);
+    abstract void CelsiusToFarinhate(double temperature);
 
     //    Кельвіни в Цельсієм
-    abstract double KelvinToCelsius(double temperature);
+    abstract void KelvinToCelsius(double temperature);
 
     //    Кельвіни в Фаренгейти
-    abstract double KelvinToFarinhate(double temperature);
+    abstract void KelvinToFarinhate(double temperature);
 
     //    Фаренгейти в Кельвіни
-    abstract double FarinhateToKelvin(double temperature);
+    abstract void FarinhateToKelvin(double temperature);
 
     //    Фаренгейти в Цельсієм
-    abstract double FarinhateToCelsius(double temperature);
+    abstract void FarinhateToCelsius(double temperature);
 
 
 }

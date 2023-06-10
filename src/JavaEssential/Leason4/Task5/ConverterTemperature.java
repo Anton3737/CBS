@@ -1,4 +1,4 @@
-package JavaEssential.Leason4.Task4;
+package JavaEssential.Leason4.Task5;
 
 import java.util.Scanner;
 

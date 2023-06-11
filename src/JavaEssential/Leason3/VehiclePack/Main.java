@@ -9,11 +9,6 @@ public class Main {
         Vehicle vehicle = new Vehicle(345, 75, 2002);
         Car car = new Car(12000, 340, 2017, "Pink", "Mercedes");
 
-
-
-
-
-
     }
 
 }

@@ -1,4 +1,4 @@
-package JavaEssential.Leason4.Task3;
+package JavaEssential.Leason4.Task3NEW;
 
 public interface Playable {
     void play();

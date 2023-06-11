@@ -1,35 +1,21 @@
-package JavaEssential.Leason4.Task3;
+package JavaEssential.Leason4.Task3NEW;
 
 import java.util.Scanner;
 
-public class Player implements Playable, Recodable {
+public class Main {
+    public static void main(String[] args) {
+
+        Playable SonyIsPlay = new Player();
+        Recodable SonyIsRecord = new Player();
+
+        SonyIsPlay.play();
+        SonyIsPlay.pause();
+        SonyIsPlay.stop();
 
 
-    @Override
-    public void play() {
-        System.out.println("Грає");
-    }
-
-    @Override
-    public void record() {
-        System.out.println("Записує");
-    }
-
-    @Override
-    public void pause() {
-        System.out.println("Пауза");
-    }
-
-    @Override
-    public void stop() {
-        System.out.println("Зупинити");
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-
-        Player SONYisPlay = new Player();
-
-        Player SONYisRecord = new Player();
+        SonyIsRecord.record();
+        SonyIsRecord.pause();
+        SonyIsRecord.stop();
 
 
         for (; ; ) {
@@ -38,26 +24,25 @@ public class Player implements Playable, Recodable {
             String StartPlay = sc.next();
             if (StartPlay.equals("PLAY")) {
                 System.out.println("Початок програвання треку");
-                SONYisPlay.play();
+                SonyIsPlay.play();
             } else if (StartPlay.equals("REC")) {
                 System.out.println("Початок запису треку");
-                SONYisRecord.record();
+                SonyIsRecord.record();
             } else if (StartPlay.equals("STOPREC")) {
                 System.out.println("Зупинка запису треку");
-                SONYisRecord.record();
-                SONYisPlay.stop();
+                SonyIsRecord.stop();
             } else if (StartPlay.equals("STOPLAY")) {
                 System.out.println("Зупинка треку");
-                SONYisPlay.stop();
-                SONYisRecord.record();
+                SonyIsRecord.stop();
+                SonyIsRecord.record();
             } else if (StartPlay.equals("PAUSEPLAY")) {
                 System.out.println("Поставити трек на паузу");
-                SONYisPlay.pause();
-                SONYisRecord.pause();
+                SonyIsPlay.pause();
+                SonyIsRecord.pause();
             } else if (StartPlay.equals("PAUSEREC")) {
                 System.out.println("Поставити запис на паузу");
-                SONYisPlay.pause();
-                SONYisRecord.pause();
+                SonyIsPlay.pause();
+                SonyIsRecord.pause();
             }
 
         }

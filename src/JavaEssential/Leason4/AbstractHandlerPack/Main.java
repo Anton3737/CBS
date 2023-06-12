@@ -4,6 +4,27 @@ import java.util.Scanner;
 
 public class Main {
 
+
+    public static void documentHandler(String docType) {
+        AbstractHandler XMLHandler = new XMLHandler();
+        AbstractHandler TXTHandler = new TXTHandler();
+        AbstractHandler DOCHandler = new DOCHandler();
+
+        if (docType.equals("XML")) {
+            XMLHandler.open();
+
+        }
+        if (docType.equals("TXT")) {
+            TXTHandler.open();
+
+        }
+        if (docType.equals("DOC")) {
+            DOCHandler.open();
+
+        }
+    }
+
+
     public static void main(String[] args) {
         AbstractHandler XMLHandler = new XMLHandler();
         AbstractHandler TXTHandler = new TXTHandler();

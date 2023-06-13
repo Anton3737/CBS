@@ -2,5 +2,5 @@ package JavaEssential.Leason3.PrinterPack;
 
 public interface Color {
 
-    void print();
+    void print(String value);
 }

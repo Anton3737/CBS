@@ -1,5 +1,7 @@
 package JavaEssential.Leason3.PrinterPack;
 
+import java.util.Scanner;
+
 public class Printer implements Color {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -12,14 +14,17 @@ public class Printer implements Color {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-
-    public static void main(String[] args) {
-
-
-    }
-
     @Override
-    public void print() {
-        System.out.println("Hallo World");
+    public void print(String value) {
+        System.out.println(value);
     }
 }
+
+
+//Завдання 6
+//        Використовуючи IntelliJ IDEA, створіть проект. Потрібно:
+//        Створити клас Printer.
+//        У тілі класу створіть метод void print(String value), який виводить на екран значення аргументу.
+//        Реалізуйте можливість того, щоб у разі успадкування від даного класу інших класів, та виклику
+//        відповідного методу їх екземпляра, рядки, передані як аргументи методів, виводилися різними кольорами.
+//        Обязательно используйте приведення типів.

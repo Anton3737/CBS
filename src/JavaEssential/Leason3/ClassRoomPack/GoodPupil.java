@@ -1,23 +1,36 @@
 package JavaEssential.Leason3.ClassRoomPack;
 
-public class GoodPupil extends Pupil{
+public class GoodPupil extends Pupil {
+
+    public GoodPupil(String name, String second_name) {
+        super(name, second_name);
+    }
+
+    public GoodPupil(String name, String second_name, int age) {
+        super(name, second_name, age);
+    }
+
+    public GoodPupil(String name, String second_name, int age, String city) {
+        super(name, second_name, age, city);
+    }
+
     @Override
     void study() {
-        super.study();
+        System.out.println("Навчається нормально");
     }
 
     @Override
     void read() {
-        super.read();
+        System.out.println("Читає нормально");
     }
 
     @Override
     void write() {
-        super.write();
+        System.out.println("Пише нормально");
     }
 
     @Override
     void relax() {
-        super.relax();
+        System.out.println("Відпочиває нормально");
     }
 }

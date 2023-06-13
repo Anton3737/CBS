@@ -10,18 +10,14 @@ public class Main {
         AbstractHandler TXTHandler = new TXTHandler();
         AbstractHandler DOCHandler = new DOCHandler();
 
-        if (docType.equals("XML")) {
-            XMLHandler.open();
+        XMLHandler.open();
+        TXTHandler.open();
+        DOCHandler.open();
+
+        if (docType.equals("XML") || docType.equals("TXT") || docType.equals("DOC")) {
 
         }
-        if (docType.equals("TXT")) {
-            TXTHandler.open();
 
-        }
-        if (docType.equals("DOC")) {
-            DOCHandler.open();
-
-        }
     }
 
 

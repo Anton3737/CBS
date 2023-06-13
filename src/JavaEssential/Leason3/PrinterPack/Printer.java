@@ -2,21 +2,123 @@ package JavaEssential.Leason3.PrinterPack;
 
 import java.util.Scanner;
 
-public class Printer implements Color {
+public class Printer {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    String ANSI_RESET = "\u001B[0m";
+    String ANSI_BLACK = "\u001B[30m";
+    String ANSI_RED = "\u001B[31m";
+    String ANSI_GREEN = "\u001B[32m";
+    String ANSI_YELLOW = "\u001B[33m";
+    String ANSI_BLUE = "\u001B[34m";
+    String ANSI_PURPLE = "\u001B[35m";
+    String ANSI_CYAN = "\u001B[36m";
+    String ANSI_WHITE = "\u001B[37m";
 
-    @Override
-    public void print(String value) {
+    void print(String value) {
         System.out.println(value);
+    }
+
+    public static void main(String[] args) {
+
+        for (; ; ) {
+            Scanner sc = new Scanner(System.in);
+            String inputValue = sc.next();
+
+            Printer printer;
+
+            switch (inputValue) {
+                case "black":
+                    printer = new ColorBlack();
+                    printer.print(inputValue);
+                    break;
+                case "red":
+                    printer = new ColorRed();
+                    printer.print(inputValue);
+                    break;
+                case "green":
+                    printer = new ColorGreen();
+                    printer.print(inputValue);
+                    break;
+                case "yellow":
+                    printer = new ColorYellow();
+                    printer.print(inputValue);
+                    break;
+                case "purple":
+                    printer = new ColorPurple();
+                    printer.print(inputValue);
+                    break;
+                case "blue":
+                    printer = new ColorBlue();
+                    printer.print(inputValue);
+                    break;
+                case "cyan":
+                    printer = new ColorCyan();
+                    printer.print(inputValue);
+                    break;
+                case "white":
+                    printer = new ColorWhite();
+                    printer.print(inputValue);
+                    break;
+                default:
+                    System.out.println("Такий колір відсутній");
+            }
+        }
+    }
+}
+
+class ColorBlack extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_BLACK + value + ANSI_RESET);
+    }
+
+}
+
+class ColorRed extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_RED + value + ANSI_RESET);
+    }
+}
+
+class ColorGreen extends Printer {
+    public void print(String value) {
+        System.out.println(ANSI_GREEN + value + ANSI_RESET);
+    }
+}
+
+class ColorYellow extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_YELLOW + value + ANSI_RESET);
+    }
+}
+
+class ColorBlue extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_BLUE + value + ANSI_RESET);
+    }
+}
+
+class ColorPurple extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_PURPLE + value + ANSI_RESET);
+    }
+}
+
+class ColorCyan extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_CYAN + value + ANSI_RESET);
+    }
+}
+
+class ColorWhite extends Printer {
+
+    public void print(String value) {
+        System.out.println(ANSI_WHITE + value + ANSI_RESET);
     }
 }
 

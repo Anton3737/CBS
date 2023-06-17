@@ -36,6 +36,7 @@ public enum Vehicles {
         Vehicles Audi = Vehicles.AUDI;
         Vehicles Skoda = Vehicles.SKODA;
 
+
         System.out.println(Mercedes);
         System.out.println(Kia);
         System.out.println(Honda);
@@ -46,8 +47,13 @@ public enum Vehicles {
         System.out.println(Maserati);
         System.out.println(Audi);
         System.out.println(Skoda);
-
-
     }
-
 }
+
+//        Завдання 4
+//        Створіть проект за допомогою IntelliJ IDEA.
+//        Створіть перечислювальний тип (enum) Vehicles, що містить конструктор,
+//        який повинен набувати цілого числа (вартість автомобіля), містити метод getColor(),
+//        який повертає рядок з кольором автомобіля, і містити перевантажений метод toString(),
+//        який повинен повертати рядок з назвою екземпляра, кольором та вартістю автомобіля.
+

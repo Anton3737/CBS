@@ -17,8 +17,7 @@ public class SumMin {
 
         int tmp = 0;
         for (int i = A; i <= B; i++) {
-
-            tmp = tmp + i;
+            tmp += i;
         }
         System.out.println("Сумма чисел в діапазоні: " + A + " та " + B + " складає: " + tmp);
 

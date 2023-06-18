@@ -4,26 +4,27 @@ import java.util.Scanner;
 
 public class Task6 {
 
-    public static void main(String[] args) {
 
+    static void FactorMethod() {
         Scanner sc = new Scanner(System.in);
-
         int N = sc.nextInt();
-        if (N <= 0) {
+        if (N >= 1) {
+            int factorial = 1;
+            double tmp = 1;
+            for (int i = 0; i < N; i++) {
+                factorial += i;
+                tmp += (1.0 / (factorial));
+                System.out.println(tmp);
+            }
+        } else if (N <= 0) {
             System.out.println("Error");
         }
+    }
 
-        int factorial = 1;
-        double tmp = 1;
+    public static void main(String[] args) {
 
-        for (int i = 0; i < N; i++) {
-            factorial = factorial + i;
+        FactorMethod();
 
-            tmp = tmp + 1.0 / (factorial);
-
-            System.out.println(tmp);
-
-        }
     }
 }
 //Завдання 6

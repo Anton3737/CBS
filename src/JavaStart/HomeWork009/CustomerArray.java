@@ -9,8 +9,12 @@ public class CustomerArray {
 
         Scanner sc = new Scanner(System.in);
 
-        int[] CustomerArray = new int[10];
+        System.out.println("Внесіть кількість елементів масиву:");
+        int numberOfArrayElement = sc.nextInt();
 
+        int[] CustomerArray = new int[numberOfArrayElement];
+
+        System.out.println("Довжина масиву складає: " + CustomerArray.length + " індексів");
         for (int i = 0; i < CustomerArray.length; i++) {
             System.out.println("Введіть число яке бажаєте додати до масиву " + i + " /з " + CustomerArray.length);
             CustomerArray[i] = sc.nextInt();
@@ -19,7 +23,8 @@ public class CustomerArray {
         for (int array : CustomerArray) {
             System.out.print(array + " ");
         }
-        System.out.println();
+
+        System.out.println("\n");
 
         int tmpMax = CustomerArray[0];
 
@@ -46,8 +51,7 @@ public class CustomerArray {
         System.out.println("Сумма чисел масиву складає = " + tmpSum);
 
         double tmpAvg = 0;
-
-
+        
         for (int i = 0; i < CustomerArray.length; i++) {
             tmpAvg += CustomerArray[i];
         }

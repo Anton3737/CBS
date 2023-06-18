@@ -15,7 +15,7 @@ public class Printer {
     String ANSI_WHITE = "\u001B[37m";
 
     void print(String value) {
-        System.out.println(value);
+            System.out.println(value);
     }
 
     public static void main(String[] args) {
@@ -42,6 +42,7 @@ public class Printer {
                 case "yellow":
                     printer = new ColorYellow();
                     printer.print(inputValue);
+
                     break;
                 case "purple":
                     printer = new ColorPurple();
@@ -69,7 +70,7 @@ public class Printer {
 class ColorBlack extends Printer {
 
     public void print(String value) {
-        System.out.println(ANSI_BLACK + value + ANSI_RESET);
+        System.out.print(ANSI_BLACK + value + ANSI_RESET);
     }
 
 }

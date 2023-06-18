@@ -4,53 +4,55 @@ import java.util.Scanner;
 
 public class UserArray {
 
-    static int[] methoodWithTwoParam(int[] array, int value) {
-        int[] newArray = new int[value];
 
-        for (int i = 0; i < array.length && i < newArray.length; i++) {
-                newArray[i] = array[i];
+    static void MethodAddOneElement(int[] intArray) {
+        int[] newArray = new int[intArray.length + 1];
+        System.out.println("розмір = " + intArray.length);
+        for (int i = 0; i < intArray.length; i++) {
+            newArray[i] = intArray[i];
         }
-        System.out.println("Довжина нового масиву складає " + newArray.length);
-        for (int soutNewArray : newArray) {
-            System.out.print(soutNewArray + " ");
+        for (int ResArray : newArray) {
+            System.out.println(ResArray);
         }
-        return array;
+    }
+
+    static void Method1(int[] intArray, int value) {
+        int[] newArray = new int[intArray.length + 1];
+        newArray[0] = value;
+        System.arraycopy(intArray, 0, newArray, 1, intArray.length);
+        System.out.println("Розмір масиву: " + newArray.length);
+        for (int arr : newArray) {
+            System.out.println(arr);
+        }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ініціалізуйте роз'ємність масиву:");
-        int arraySize = sc.nextInt();
-        int[] mainArray = new int[arraySize];
-        System.out.println("Довжина масиву: " + mainArray.length);
-
-        for (int i = 0; i < mainArray.length; i++) {
-            System.out.println("Введіть число яке бажаєте додати до масиву " + i + " /з " + mainArray.length);
-            mainArray[i] = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Оголосіть розмір масиву");
+        int[] intArray = new int[scanner.nextInt()];
+        System.out.println("Вихідни масив розміром = " + intArray.length);
+        for (int i = 0; i < intArray.length; i++) {
+            System.out.println("Оголосіть елементи масиву по індексу:" + i);
+            intArray[i] = scanner.nextInt();
         }
 
-        for (int i = 0; i < mainArray.length; i++) {
-            System.out.print(mainArray[i] + " ");
-        }
+        MethodAddOneElement(intArray);
 
-        System.out.println();
-        System.out.println("Внесфть ємність нового масиву: ");
-        int capacityArray = sc.nextInt();
+        Method1(intArray, 99);
 
-        mainArray = methoodWithTwoParam(mainArray, capacityArray);
+
     }
 }
 
+
 //Завдання 4
 //        Використовуючи IntelliJ IDEA, створіть клас UserArray.
-//        Створити метод, який виконуватиме збільшення довжини масиву,
-//        переданого як аргумент, на 1 елемент.
+//        Створити метод, який виконуватиме збільшення довжини масиву, переданого як аргумент, на 1 елемент.
 //        Елементи масиву мають зберегти своє значення та порядок індексів.
 
 //        Створити метод, який приймає два аргументи,
-//        перший аргумент типу int [] array,
-//        другий аргумент типу int value.
-//        У тілі методу реалізуйте можливість додавання другого аргументу
-//        методу в масив за індексом 0, водночас довжина нового масиву
-//        має збільшитися на 1 елемент, а елементи одержуваного масиву як
-//        перший аргумент мають скопіюватися в новий масив починаючи з індексу 1.
+//        перший аргумент типу int [] array, другий аргумент типу int value.
+//        У тілі методу реалізуйте можливість додавання другого аргументу методу в масив за індексом 0,
+//        водночас довжина нового масиву має збільшитися на 1 елемент, а елементи одержуваного
+//        масиву як перший аргумент мають скопіюватися в новий масив починаючи з індексу 1.
+//https://www.examclouds.com/ru/java/java-core-russian/system-arraycopy

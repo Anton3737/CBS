@@ -5,28 +5,13 @@ import java.util.Scanner;
 public class ReversedArray {
 
 
-//    static void myReverse(int[] array) {
-//        System.out.println("\n Вивід масиву в зворотньому порядку.");
-//        for (int i = array.length - 1; i >= 0; i--) {
-//            System.out.print(array[i] + " ");
-//        }
-//    }
+    static void myReverse(int[] array) {
+        System.out.println("\n Вивід масиву в зворотньому порядку.");
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
 
-//    static int[] subArray(int[] array, int index, int count) {
-//        System.out.println("\n Відпрацювання методу int[] subArray");
-//        int[] newArray = new int[count];
-//
-//        for (int i = index; i < count; i++) {
-//
-//        }
-//        for (int i = 0; i < newArray.length; i++) {
-//            newArray[i] += array[i];
-//            System.out.print(array[i] + " ");
-//        }
-//
-//        return newArray;
-//
-//    }
 
     static int[] subArray(int[] array, int index, int count) {
         System.out.println("\n Відпрацювання методу int[] subArray");
@@ -35,7 +20,6 @@ public class ReversedArray {
         }
         return array;
     }
-
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -52,7 +36,7 @@ public class ReversedArray {
             System.out.print(outArray + " ");
         }
 
-//        myReverse(array);
+        myReverse(array);
 
         subArray(array, 4, 10);
 

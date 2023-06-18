@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calculator {
 
     static void calculate(int A, int B, int C) {
-        double averageABC = ((double) (A + B + C) / 3);
+        double averageABC = ((A + B + C) / 3.0);
         System.out.println("Середнім арифметичним 3х чисел " + A + " | " + B + " | " + C + " дорівнює " + averageABC);
     }
 

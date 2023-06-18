@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class NumbersCheck {
 
+    //        1)      чи є введене число позитивним, чи негативним; +
     static void inputNumberHigherThenZero(double inputNumber) {
         if (inputNumber > 0) {
             System.out.println("Введене число є додатнім і має значення що > 0");
@@ -14,8 +15,21 @@ public class NumbersCheck {
         }
     }
 
-
-
+    static void naturalNumber(double inputNumber) {
+        if (inputNumber > 1) {
+            for (int i = 2; i < inputNumber; i++) {
+                if (inputNumber % 2 == 0 || inputNumber % 1 == inputNumber) {
+                    System.out.println("Число не є простим");
+                    break;
+                } else {
+                    System.out.println("Число просте");
+                    break;
+                }
+            }
+        } else {
+            System.out.println("Число менше 1");
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -24,7 +38,7 @@ public class NumbersCheck {
 
         inputNumberHigherThenZero(inputNumber);
 
-
+        naturalNumber(inputNumber);
     }
 
 
@@ -33,7 +47,7 @@ public class NumbersCheck {
 
 //Завдання 4
 //        Використовуючи IntelliJ IDEA, створіть клас NumbersCheck. Напишіть метод, який визначатиме:
-//        1)      чи є введене число позитивним, чи негативним;
+//        1)      чи є введене число позитивним, чи негативним; +
 //        2)      чи є воно простим (використовуйте техніку перебору значень).
 //        Просте число – це натуральне число, яке ділиться на 1 й саме на себе.
 //        Щоби визначити просте число чи ні, варто знайти всі його цілі дільники. Якщо дільників більше 2-х, то воно не просте;

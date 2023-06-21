@@ -2,6 +2,7 @@ package JavaEssential.Leason3.ClassRoomPack;
 
 public class GoodPupil extends Pupil {
 
+
     public GoodPupil(String name, String second_name) {
         super(name, second_name);
     }

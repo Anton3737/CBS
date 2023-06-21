@@ -24,13 +24,14 @@ public class Pupil {
         this.city = city;
     }
 
+
     @Override
     public String toString() {
         return
-                "Ім'я:" + name +
-                        " Прізвище: " + second_name +
-                        " Вік: " + age +
-                        " Місто:" + city;
+                "Ім'я: " + name +
+                        ", Прізвище: " + second_name +
+                        ", Вік: " + age +
+                        ", Місто: " + city;
     }
 
     void study() {
@@ -44,6 +45,5 @@ public class Pupil {
 
     void relax() {
     }
-
 
 }

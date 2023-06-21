@@ -5,20 +5,21 @@ import java.util.Scanner;
 public class ReversedArray {
 
 
-    static void myReverse(int[] array) {
-        System.out.println("\n Вивід масиву в зворотньому порядку.");
+    static int[] myReverse(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
         }
+        return array;
     }
 
 
     static int[] subArray(int[] array, int index, int count) {
+        int[] newArray = new int[count];
         System.out.println("\n Відпрацювання методу int[] subArray");
         for (int i = index; i < count; i++) {
             System.out.print(array[i] + " ");
+//            System.arraycopy(array, 0, newArray, 0, array.length);
         }
-        return array;
+        return newArray;
     }
 
     public static void main(String[] args) {
@@ -37,8 +38,9 @@ public class ReversedArray {
         }
 
         myReverse(array);
+//
+        subArray(myReverse(array), 4, 20);
 
-        subArray(array, 4, 10);
 
     }
 }
@@ -46,10 +48,12 @@ public class ReversedArray {
 //Завдання 3
 //        Використовуючи IntelliJ IDEA, створіть клас ReversedArray.
 //        Створити метод myReverse(int [] array), який приймає як аргумент масив цілочислових елементів
-//        і повертає інвертований масив (елементи масиву у зворотному порядку).
+//        і повертає інвертований масив (елементи масиву у зворотному порядку). +
+
 //        Створити метод int [] subArray (int [] array, int index, int count).
 //        Метод повертає частину отриманого як аргумент масиву, починаючи з позиції,
 //        яка зазначена в аргументі index, розмірністю, що відповідає значенню аргументу count.
+
 //        Якщо аргумент count містить значення більше, ніж кількість елементів,
 //        що входять до частини вихідного масиву (від зазначеного індексу index до індексу останнього елемента),
 //        то під час формування нового масиву розмірністю в count, заповніть одиницями ті елементи,

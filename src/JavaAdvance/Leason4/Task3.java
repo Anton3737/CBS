@@ -34,7 +34,7 @@ public class Task3 {
 
     public static void main(String[] args) throws ParseException {
 
-        bordDate(20, 03, 1994);
+        bordDate(06, 11, 1949);
     }
 
 }

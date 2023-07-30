@@ -21,13 +21,15 @@ public class Task2 {
                 "лилося якесь тихе, м’яке, ласкаве світло, — то була й уся краса сієї дівчини (В. Винниченко). \n" + time + "\n";
 
 
-        File newFile = new File("/Users/macintosh/IdeaProjects/CBS/src/JavaAdvance/Leason3/Task2/NewFileTask2.txt");
-        newFile.createNewFile();
+//        File newFile = new File("/Users/macintosh/IdeaProjects/CBS/src/JavaAdvance/Leason3/Task2/NewFileTask2.txt");
+        File newFile = new File("src/JavaAdvance/Leason3/Task2/NewFileTask2.txt");
+//        newFile.createNewFile();
+        try (FileWriter fileWriter = new FileWriter(newFile, true)) {
+            fileWriter.write(text);
+            fileWriter.flush();
+            fileWriter.close();
+        }
 
-        FileWriter fileWriter = new FileWriter(newFile, true);
-        fileWriter.write(text);
-        fileWriter.flush();
-        fileWriter.close();
 
         FileReader fileReader = new FileReader(newFile);
 
@@ -43,13 +45,13 @@ public class Task2 {
         System.out.println("\n****************************************************************************************\n");
         // метод через BufferReader
 
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String temp1 = null;
-        while ((temp1 = bufferedReader.readLine()) != null) {
-            System.out.println(temp1);
+        try (BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+            String temp1 = null;
+            while ((temp1 = bufferedReader.readLine()) != null) {
+                System.out.println(temp1);
+            }
+            bufferedReader.close();
         }
-        bufferedReader.close();
-
     }
 }
 

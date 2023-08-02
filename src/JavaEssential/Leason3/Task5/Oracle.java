@@ -35,15 +35,6 @@ public class Oracle {
   **/
 //    https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html
 
-/**
- Модифікатори доступу.
-
-
-
-
-
-
- **/
 
 
 

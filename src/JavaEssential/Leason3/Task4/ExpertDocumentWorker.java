@@ -17,4 +17,8 @@ public class ExpertDocumentWorker extends ProDocumentWorker{
         System.out.println("EXP");
         System.out.println("Документ збережений в новому форматі");
     }
+
+    public static void main(String[] args) {
+        System.out.println();
+    }
 }

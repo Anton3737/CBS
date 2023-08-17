@@ -21,7 +21,7 @@ PRIMARY KEY (idNP)          -- ВІДКОРИГОВАНО 17/08/23
 );
 
 INSERT INTO WorkerNameAndPhone
-(idNP,name,phone)                                           -- ВІДКОРИГОВАНО 17/08/23
+(name,phone)                                           -- ВІДКОРИГОВАНО 17/08/23
 VALUES
 ('Viktor', '380912223344'),
 ('Nikolay','380507772233'),
@@ -42,7 +42,7 @@ FOREIGN KEY (idSPP) REFERENCES WorkerNameAndPhone(idNP)     -- ВІДКОРИГ�
 );
 
 INSERT INTO SalaryPosition
-(idSPP,salary,position) 									-- ВІДКОРИГОВАНО 17/08/23
+(salary,position) 									-- ВІДКОРИГОВАНО 17/08/23
 VALUES
 (2400.33,'SQL developer'),
 (12000.99, 'Frontand developer'),
@@ -64,7 +64,7 @@ FOREIGN KEY (idBLM) REFERENCES WorkerNameAndPhone(idNP)
 );
 
 INSERT INTO BorndateLifePlacesAndMariedStatus
-(idBLM,mariedStatus,bornDate,livePlace)
+(mariedStatus,bornDate,livePlace)
 VALUES
 ('НЕ одружений/на','19/06/1985','Київ'),
 ('НЕ одружений/на','31/12/1989','Житомир'),

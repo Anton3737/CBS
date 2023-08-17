@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoonRobotVespenGasDetector {
@@ -101,15 +102,47 @@ public class MoonRobotVespenGasDetector {
         }
     }
 
+
+    public void fixNames(String[] names, String[] toReplace) {
+        names[1] = toReplace[0];
+        names[3] = toReplace[1];
+    }
+
+    public void firstAndLastTogether(String[] names) {
+
+        Arrays.stream(names).toList().stream().collect();
+
+
+
+    }
+
+
+//    Напиши метод public String firstAndLastTogether(String[] names).
+//    Він приймає масив рівно з 10 рядків, і повертає перший і останній рядок,
+//    з'єднані рядком " AND ", і в кінці додається слово "TOGETHER". Між усіма словами має бути рівно один пробіл.
+
+//    виклик firstAndLastTogether на масиві ["io", "pu", "re", "max", "kok", "mis", "hit", "kio", "pax", "rew"] повертає "io AND rew TOGETHER"
+
+
     //Test output
     public static void main(String[] args) {
         MoonRobotVespenGasDetector names = new MoonRobotVespenGasDetector();
-//        System.out.println(names.encode();
-        String resEncode = names.encode("Crab");
-        System.out.println("encode " + resEncode);
-        System.out.println(names.decode(resEncode));
+        String[] namesArr = {"io", "pu", "re", "max", "kok", "mis", "hit", "kio", "pax", "rew"};
+        names.firstAndLastTogether(namesArr);
 
-        names.createForms();
+//        String[] namese = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
+//        String[] toReplace = new String[]{"lopr", "boki"};
+//
+//        new MoonRobotVespenGasDetector().fixNames(namese, toReplace);
+//        System.out.println(Arrays.toString(namese));
+
+
+//        System.out.println(names.encode();
+//        String resEncode = names.encode("Crab");
+//        System.out.println("encode " + resEncode);
+//        System.out.println(names.decode(resEncode));
+//
+//        names.createForms();
 
 
 //        //Should be true

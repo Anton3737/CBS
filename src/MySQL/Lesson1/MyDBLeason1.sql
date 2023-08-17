@@ -14,13 +14,14 @@ USE MyDB;
 -- 1-а містить імена та номери телефонів співробітників певної компанії,
 
 CREATE TABLE WorkerNameAndPhone(
-idNP INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+idNP INT AUTO_INCREMENT NOT NULL,
 name VARCHAR(50) NOT NULL,
-phone VARCHAR(35) NOT NULL
+phone VARCHAR(35) NOT NULL,
+PRIMARY KEY (idNP)          -- ВІДКОРИГОВАНО 17/08/23
 );
 
 INSERT INTO WorkerNameAndPhone
-(name,phone)
+(idNP,name,phone)                                           -- ВІДКОРИГОВАНО 17/08/23
 VALUES
 ('Viktor', '380912223344'),
 ('Nikolay','380507772233'),
@@ -33,13 +34,15 @@ VALUES
 -- 2-а містить відомості про їхню зарплату, та посади,
 
 CREATE TABLE SalaryPosition(
-idSPP INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+idSPP INT AUTO_INCREMENT NOT NULL,
 salary DOUBLE NOT NULL,
-position VARCHAR(100)
+position VARCHAR(100),
+PRIMARY KEY (idSPP),                                       -- ВІДКОРИГОВАНО 17/08/23
+FOREIGN KEY (idSPP) REFERENCES WorkerNameAndPhone(idNP)     -- ВІДКОРИГОВАНО 17/08/23
 );
 
 INSERT INTO SalaryPosition
-(salary,position)
+(idSPP,salary,position) 									-- ВІДКОРИГОВАНО 17/08/23
 VALUES
 (2400.33,'SQL developer'),
 (12000.99, 'Frontand developer'),
@@ -52,14 +55,16 @@ VALUES
 -- 3-тя містить інформацію про сімейне становище, дату народження та місце проживання.
 
 CREATE TABLE BorndateLifePlacesAndMariedStatus(
-idBLM INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+idBLM INT AUTO_INCREMENT NOT NULL,
 mariedStatus VARCHAR(20) NOT NULL,
 bornDate VARCHAR(20) NOT NULL,
-livePlace VARCHAR(100) NOT NULL
+livePlace VARCHAR(100) NOT NULL,
+PRIMARY KEY (idBLM),
+FOREIGN KEY (idBLM) REFERENCES WorkerNameAndPhone(idNP)
 );
 
 INSERT INTO BorndateLifePlacesAndMariedStatus
-(mariedStatus,bornDate,livePlace)
+(idBLM,mariedStatus,bornDate,livePlace)
 VALUES
 ('НЕ одружений/на','19/06/1985','Київ'),
 ('НЕ одружений/на','31/12/1989','Житомир'),

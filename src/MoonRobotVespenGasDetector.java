@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MoonRobotVespenGasDetector {
@@ -108,9 +110,33 @@ public class MoonRobotVespenGasDetector {
         names[3] = toReplace[1];
     }
 
-    public void firstAndLastTogether(String[] names) {
+    public void changeElectResult(String[] results) {
+        String tmp = results[0];
+        results[0] = results[results.length - 1];
+        results[results.length - 1] = tmp;
 
-        Arrays.stream(names).toList().stream().collect();
+    }
+
+
+    public String[] changeElectResultAgain(String[] results) {
+        String[] array = new String[3];
+        array[0] = results[2];
+        array[1] = results[3];
+        array[2] = results[4];
+
+        return array;
+    }
+
+    public char[][] createKeyboard(){
+        char[][] array = { {'1', '2', '3'},
+                           {'4', '5', '6'},
+                           {'7', '8', '9'},
+                           {'*', '0', '#'} };
+
+        return array;
+    }
+
+    public void printKeyboard(){
 
 
 
@@ -123,12 +149,12 @@ public class MoonRobotVespenGasDetector {
 
 //    виклик firstAndLastTogether на масиві ["io", "pu", "re", "max", "kok", "mis", "hit", "kio", "pax", "rew"] повертає "io AND rew TOGETHER"
 
-
     //Test output
     public static void main(String[] args) {
         MoonRobotVespenGasDetector names = new MoonRobotVespenGasDetector();
-        String[] namesArr = {"io", "pu", "re", "max", "kok", "mis", "hit", "kio", "pax", "rew"};
-        names.firstAndLastTogether(namesArr);
+        String[] results = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
+        names.changeElectResultAgain(results);
+
 
 //        String[] namese = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
 //        String[] toReplace = new String[]{"lopr", "boki"};

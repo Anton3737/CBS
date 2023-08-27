@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -137,9 +138,17 @@ public class MoonRobotVespenGasDetector {
     }
 
     public void printKeyboard(){
+        char[][] newArray = createKeyboard();
+        System.out.println(Arrays.toString(newArray[0]));
+        System.out.println(Arrays.toString(newArray[1]));
+        System.out.println(Arrays.toString(newArray[2]));
+        System.out.println(Arrays.toString(newArray[3]));
+    }
 
-
-
+    public String[] makeCopy(String[] names){
+        String [] copyArray = Arrays.copyOf(names,names.length);
+        System.out.println(Arrays.toString(copyArray));
+        return copyArray;
     }
 
 
@@ -154,6 +163,10 @@ public class MoonRobotVespenGasDetector {
         MoonRobotVespenGasDetector names = new MoonRobotVespenGasDetector();
         String[] results = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
         names.changeElectResultAgain(results);
+        names.printKeyboard();
+        names.makeCopy(results);
+
+
 
 
 //        String[] namese = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};

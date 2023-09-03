@@ -35,3 +35,69 @@ SELECT id,received_the_weapon,Office_Number,Platoon,Gun,GunModefication,Issued_t
 DROP TABLE GetGUN;
 DROP DATABASE NormaliziDB ;
 
+
+CREATE TABLE Persons
+(
+id INT AUTO_INCREMENT NOT NULL,
+received_the_weapon VARCHAR(30),
+PRIMARY KEY (id)
+);
+
+INSERT INTO Persons
+(received_the_weapon)
+VALUE
+();
+
+
+CREATE TABLE OffiseAndPlatoon
+(
+id INT AUTO_INCREMENT NOT NULL,
+idOAP INT NOT NULL,
+Office_Number INT DEFAULT 'Unknown',
+Platoon INT NOT NULL,
+PRIMARY KEY (id)
+);
+
+INSERT INTO OffiseAndPlatoon
+(idOAP,Office_Number)
+VALUE
+();
+
+
+CREATE TABLE Weapon
+(
+id INT AUTO_INCREMENT NOT NULL,
+idWeapon INT NOT NULL,
+Gun VARCHAR(10),
+GunModefication VARCHAR(10),
+PRIMARY KEY (id),
+FOREIGN KEY(idWeapon) REFERENCES Persons(id)
+);
+
+INSERT INTO Weapon
+(idWeapon,Gun,GunModefication)
+VALUE
+();
+
+
+
+CREATE TABLE Gunsmith(
+id INT AUTO_INCREMENT NOT NULL,
+idGunsmith INT NOT NULL,
+Issued_the_weapon VARCHAR(20),
+Runk VARCHAR(20),
+PRIMARY KEY (id),
+FOREIGN KEY(idGunsmith) REFERENCES Persons(id)
+);
+
+INSERT INTO Gunsmith
+(idGunsmith,Issued_the_weapon,Runk)
+VALUE
+();
+
+
+
+
+
+
+

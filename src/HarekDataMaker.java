@@ -75,9 +75,11 @@ public class HarekDataMaker {
         int firstNum = speed / 10;
         int secNum = speed % 10;
         if (secNum < 5) {
+            System.out.println(firstNum * 10);
             return firstNum * 10;
         } else
-            return (firstNum + 1) * 10;
+            System.out.println((firstNum + 1) * 10);
+        return (firstNum + 1) * 10;
     }
 
 
@@ -113,47 +115,271 @@ public class HarekDataMaker {
     }
 
     public String getMyPrizes(int ticket) {
+        if (ticket != 0) {
+            if (ticket >= 200) {
+                System.out.print("coin ");
+            }
+            if (ticket % 10 == 0) {
+                System.out.print("crystall ");
+            }
+            if (ticket % 10 == 7) {
+                System.out.print("chip ");
+            }
+        }
+        return "";
+    }
 
-        if (ticket >= 200) {
-            return "coin";
-//            if (ticket % 10 == 0) {
-//                return "crystall";
-//            }
-//            if (ticket % 10 == 9) {
-//                return "chip";
-//            }
+    public boolean isHangarOk(int side1, int side2, int price) {
+
+        int P = side1 * side2;
+//        int cost = P * price;
+
+        if (P > 1500)
+
+            if (P >= 1500 && side1 < side2 * 2 && side2 < side1 * 2 && price <= 1000 * P) {
+                return true;
+            }
+        return false;
+    }
+
+
+    public double[] solve(int a, int b, int c) {
+        double[] doublesArray;
+        double disc = b * b - 4 * a * c;
+        if (disc > 0) {
+            doublesArray = new double[2];
+            doublesArray[0] = (-b - Math.sqrt(disc)) / (2 * a);
+            doublesArray[1] = (-b + Math.sqrt(disc)) / (2 * a);
+        } else if (disc == 0) {
+            doublesArray = new double[1];
+            doublesArray[0] = -b / (2 * a);
         } else {
-            return "null";
+            doublesArray = new double[0];
+        }
+        return doublesArray;
+    }
+
+
+    public String evenOrOdd(int number) {
+        return number % 2 == 0 ? "even" : "odd";
+    }
+
+
+    public int findMin(int[] triple) {
+        System.out.println(Math.min(triple[0], Math.min(triple[1], triple[2])));
+        return Math.min(triple[0], Math.min(triple[1], triple[2]));
+    }
+
+
+    public int translate(String romanNumber) {
+        String tmp = romanNumber.replace(" ", "").toUpperCase();
+        System.out.println(tmp);
+        switch (tmp) {
+            case ("I"):
+                return 1;
+            case ("II"):
+                return 2;
+            case ("III"):
+                return 3;
+            case ("IV"):
+                return 4;
+            case ("V"):
+                return 5;
+            case ("VI"):
+                return 6;
+            case ("VII"):
+                return 7;
+            case ("VIII"):
+                return 8;
+            case ("IX"):
+                return 9;
+            case ("X"):
+                return 10;
+            case ("XI"):
+                return 11;
+            case ("XII"):
+                return 12;
+            default:
+                return -1;
         }
     }
-//    Умови лотереї наступні:
-
-//    якщо номер квитка ділиться на 10 - ви виграли кристал (слово "crystall") +
-//    якщо номер квитка закінчується на цифру 7 - ви виграли чіп (слово "chip") +
-//    якщо номер квитка більше ніж 200 - ви виграли монету (слово "coin") +
-//    Зрозуміло, що за таких умов можна виграти кілька призів одразу.
-//
-//    Напиши програму, яка приймає номер квитка, та повертає рядок – виграні призи.
-//    Кожен виграний приз повинен відокремлюватися рівно одним пробілом.
-//    На початку і наприкінці рядка пробілів бути не повинно.
-//    Якщо призів кілька, вони повинні йти у вказаному порядку – спочатку "crystall", потім "chip", і в кінці "coin".
-//
-//    Якщо ти нічого не виграв - поверни порожній рядок.
 
 
-//    виклик getMyPrizes(10) повертає "crystall"
-//    виклик getMyPrizes(77) повертає "chip"
-//    виклик getMyPrizes(777) повертає "chip coin"
-//    виклик getMyPrizes(54) повертає ""
+    public void printPrices(float[] prices) {
+        for (int i = 0; i < prices.length; i++) {
+            String tmp = prices[i] + ".jup.";
+            System.out.println(tmp);
+        }
+    }
+
+    public void multiplyPrices(float[] prices) {
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < 1000) {
+                prices[i] = (prices[i] * 2f);
+            } else if (prices[i] >= 1000) {
+                prices[i] = (prices[i] * 1.5f);
+            }
+        }
+        String tmp = Arrays.toString(prices);
+        System.out.println(tmp);
+    }
+
+    public int[] findMinMaxPrices(int[] prices) {
+        int[] newArray;
+        int tpm = 0;
+        int lenght = prices.length;
+        if (prices.length != 0) {
+            for (int i = 0; i < lenght - 1; i++) {
+                for (int j = 0; j < lenght - i - 1; j++) {
+                    if (prices[j] > prices[j + 1]) {
+                        int tmp = prices[j];
+                        prices[j] = prices[j + 1];
+                        prices[j + 1] = tmp;
+                    }
+                }
+            }
+
+            newArray = new int[2];
+            newArray[0] = prices[0];
+            newArray[1] = prices[prices.length - 1];
+
+
+            if (newArray[0] == newArray[1]) {
+                int[] newArrays = {newArray[0]};
+                newArrays[0] = newArray[0];
+                return newArrays;
+            }
+            return newArray;
+        } else {
+            return prices;
+        }
+    }
+
+
+    public int getMinPriceCount(int[] prices) {
+        int[] newArray;
+        int length = prices.length;
+        int loopMin = 0;
+        if (prices.length != 0) {
+            for (int i = 0; i < length - 1; i++) {
+                for (int j = 0; j < length - i - 1; j++) {
+                    if (prices[j] > prices[j + 1]) {
+                        int tmp = prices[j];
+                        prices[j] = prices[j + 1];
+                        prices[j + 1] = tmp;
+                    }
+                }
+            }
+            newArray = new int[2];
+            newArray[0] = prices[0];
+            newArray[1] = prices[prices.length - 1];
+            if (newArray[0] == newArray[1]) {
+                return 1;
+            } else {
+                for (int k = 0; k < prices.length; k++) {
+                    if (prices[k] == newArray[0]) {
+                        loopMin++;
+                    }
+                }
+                return loopMin;
+            }
+        }
+        return 0;
+    }
+
+
+    public int[] removePrice(int[] prices, int toRemove) {
+        List<Integer> removeList = new ArrayList<>();
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] != toRemove) {
+                removeList.add(prices[i]);
+            }
+        }
+        int[] removeArray = new int[removeList.size()];
+        for (int i = 0; i < removeList.size(); i++) {
+            removeArray[i] = removeList.get(i);
+        }
+        System.out.println(removeList);
+        return removeArray;
+    }
+
+
+    public int[] leavePrice9(int[] prices) {
+        if (prices.length != 0) {
+            List<Integer> integerList = new ArrayList<>();
+            for (int i = 0; i < prices.length; i++) {
+                if (Math.abs(prices[i]) % 10 == 9) {
+                    integerList.add(prices[i]);
+                }
+            }
+            int[] array = new int[integerList.size()];
+            for (int i = 0; i < integerList.size(); i++) {
+                array[i] = integerList.get(i);
+            }
+            return array;
+        } else
+            return prices;
+    }
+
+    public String[] mergeStocks(String[] showcaseStocks, String[] warehouseStocks) {
+        int length = showcaseStocks.length + warehouseStocks.length;
+        String[] newStringArray = new String[length];
+        for (int i = 0; i < length; i++) {
+            newStringArray[i] = showcaseStocks[i];
+            for (int j = i; j < length; j++) {
+                newStringArray[i] = warehouseStocks[i];
+            }
+        }
+        System.out.println(Arrays.toString(newStringArray));
+        return newStringArray;
+    }
+
 
     public static void main(String[] args) {
 
 //        String[] names = new String[]{"hter", "pou", "diz"};
-//        int[] ages = new int[]{30, 35, 70};
-//        String[] planets = new String[]{"Mars", "Earth", "Jupiter"};
+//        int[] prices = {150, 100, 200, 120, 300, 100, 180};
+//        int[] prices = {49, 10, 59, 14, 29, 59, 9, 39, 51, 99, 43};
+//        int[] prices = {};
+//         new String[]{"Mars", "Earth", "Jupiter"};
+        String[] planets1 = new String[] {"gun", "bow"};
+        String[] planets2 = new String[] {"firegun"};
 //
         HarekDataMaker harekDataMaker = new HarekDataMaker();
-        harekDataMaker.getMyPrizes(100);
+
+        harekDataMaker.mergeStocks(planets1,planets2);
+//        harekDataMaker.leavePrice9(prices);
+
+//        harekDataMaker.roundSpeed(129);
+
+//        harekDataMaker.removePrice(prices, 100);
+//        harekDataMaker.getMinPriceCount(prices);
+//        harekDataMaker.findMinMaxPrices(prices);
+
+//        harekDataMaker.translate("I");
+//        harekDataMaker.translate(" X I");
+//        harekDataMaker.translate("iX ");
+//        harekDataMaker.translate("XX");
+
+
+//        harekDataMaker.findMin(new int[]{1, 10, 3});
+//        harekDataMaker.findMin(new int[]{50, 4, 100});
+
+
+//        harekDataMaker.evenOrOdd(10);
+//        harekDataMaker.evenOrOdd(5);
+
+//        harekDataMaker.solve(1, -2, -3);
+//        harekDataMaker.solve(1, 12, 36);
+//        harekDataMaker.solve(5, 3, 7);
+
+//        harekDataMaker.getMyPrizes(10);
+
+//        повертає true
+//        harekDataMaker.isHangarOk(100, 75, 100000);
+//        повертає false
+//        harekDataMaker.isHangarOk(100, 20, 10000);
+
 //        harekDataMaker.calculateMaxPower();
 //
 //        System.out.println(harekDataMaker.aggregateSingle(names[0], Integer.toString(ages[0]), planets[0]));

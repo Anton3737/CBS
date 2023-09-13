@@ -152,6 +152,11 @@ public class MoonRobotVespenGasDetector {
     }
 
 
+
+
+
+
+
 //    Напиши метод public String firstAndLastTogether(String[] names).
 //    Він приймає масив рівно з 10 рядків, і повертає перший і останній рядок,
 //    з'єднані рядком " AND ", і в кінці додається слово "TOGETHER". Між усіма словами має бути рівно один пробіл.

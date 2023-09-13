@@ -322,32 +322,124 @@ public class HarekDataMaker {
     }
 
     public String[] mergeStocks(String[] showcaseStocks, String[] warehouseStocks) {
+
         int length = showcaseStocks.length + warehouseStocks.length;
         String[] newStringArray = new String[length];
-        for (int i = 0; i < length; i++) {
-            newStringArray[i] = showcaseStocks[i];
-            for (int j = i; j < length; j++) {
-                newStringArray[i] = warehouseStocks[i];
+
+        if (length != 0) {
+            for (int i = 0; i < showcaseStocks.length; i++) {
+                newStringArray[i] = showcaseStocks[i];
             }
-        }
-        System.out.println(Arrays.toString(newStringArray));
-        return newStringArray;
+
+            for (int j = showcaseStocks.length; j < length; j++) {
+                newStringArray[j] = warehouseStocks[j - showcaseStocks.length];
+            }
+            return newStringArray;
+        } else
+            return newStringArray;
     }
 
+    public int getPricesSum(int[] prices, int minPrice, int maxPrice) {
+        int resSum = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] >= minPrice && prices[i] <= maxPrice) {
+                resSum += prices[i];
+            }
+        }
+        return resSum;
+    }
+
+
+    public String getCheapStocks(String[] stocks) {
+        String res = "";
+        for (int i = 0; i < stocks.length; i++) {
+            String tmp = stocks[i].toString();
+            String[] strings = tmp.split(" ");
+            int price = Integer.parseInt(strings[1]);
+            if (price < 200) {
+                res += strings[0] + " ";
+            }
+        }
+        System.out.println(res);
+        return res;
+    }
+
+    public String drawQuad(int n) {
+        String res = "";
+        int i = 1;
+        while (i <= n) {
+            int j = 1;
+            while (j <= n) {
+                res = "*";
+                j++;
+                System.out.print(res);
+            }
+            res = "\n";
+            i++;
+            System.out.print(res);
+        }
+        return res.toString();
+    }
+
+
+    public String drawRect(int width, int height, char c) {
+        String res = "";
+        int i = 1;
+        while (i <= height) {
+            int j = 1;
+            while (j <= width) {
+                res = String.valueOf(c);
+                j++;
+                System.out.print(res);
+            }
+            res = "\n";
+            i++;
+            System.out.print(res);
+        }
+        return res.toString();
+    }
+
+
+    public String drawLine(int length) {
+        String res = "";
+        int i = 1;
+        while (i <= length) {
+            if (i % 2 == 1) {
+                res += "*";
+            } else {
+                res += "#";
+            }
+            i++;
+        }
+//        System.out.println(res);
+        return res;
+    }
 
     public static void main(String[] args) {
 
 //        String[] names = new String[]{"hter", "pou", "diz"};
-//        int[] prices = {150, 100, 200, 120, 300, 100, 180};
+//        int[] prices1 = {10, 700, 50, 500};
 //        int[] prices = {49, 10, 59, 14, 29, 59, 9, 39, 51, 99, 43};
-//        int[] prices = {};
+//        int[] prices2 = {500, 400, 200};
 //         new String[]{"Mars", "Earth", "Jupiter"};
-        String[] planets1 = new String[] {"gun", "bow"};
-        String[] planets2 = new String[] {"firegun"};
+//        String[] names = {"gun 500", "firebow 70", "pixboom 200"};
+//        String[] planets1 = new String[]{"gun", "bow"};
+//        String[] planets2 = new String[]{"firegun"};
 //
         HarekDataMaker harekDataMaker = new HarekDataMaker();
 
-        harekDataMaker.mergeStocks(planets1,planets2);
+
+//        harekDataMaker.drawRect(2, 3, 'X');
+        harekDataMaker.drawLine(5);
+
+//        harekDataMaker.drawQuad(4);
+
+//        harekDataMaker.getCheapStocks(names);
+
+//        harekDataMaker.getPricesSum(prices1, 10, 50);
+//        harekDataMaker.getPricesSum(prices2, 10, 50);
+
+//        harekDataMaker.mergeStocks(planets1, planets2);
 //        harekDataMaker.leavePrice9(prices);
 
 //        harekDataMaker.roundSpeed(129);

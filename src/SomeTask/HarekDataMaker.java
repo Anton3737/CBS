@@ -1,4 +1,5 @@
-import java.awt.*;
+package SomeTask;
+
 import java.util.*;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class HarekDataMaker {
             String[] arr = {"Maux, Reux, Piax"};
             return arr;
         } else if (galaxy.equals("Milkyway")) {
-            String[] arr = {"Earth, Mars, Jupiter"};
+            String[] arr = {"Earth, SomeTask.Mars, Jupiter"};
             return arr;
         }
         return emptyArr;
@@ -421,7 +422,7 @@ public class HarekDataMaker {
 //        int[] prices1 = {10, 700, 50, 500};
 //        int[] prices = {49, 10, 59, 14, 29, 59, 9, 39, 51, 99, 43};
 //        int[] prices2 = {500, 400, 200};
-//         new String[]{"Mars", "Earth", "Jupiter"};
+//         new String[]{"SomeTask.Mars", "Earth", "Jupiter"};
 //        String[] names = {"gun 500", "firebow 70", "pixboom 200"};
 //        String[] planets1 = new String[]{"gun", "bow"};
 //        String[] planets2 = new String[]{"firegun"};

@@ -11,7 +11,11 @@ public class Main {
         Car[] c = {c1, c2, c3};
 
 
-        Arrays.sort(c, new Comparator<Car>() { public int compare(Car o1, Car o2) { return o1.price - o2.price; }});
+        Arrays.sort(c, new Comparator<Car>() {
+            public int compare(Car o1, Car o2) {
+                return o1.price - o2.price;
+            }
+        });
         for (Car temp : c) {
             System.out.println(temp);
         }

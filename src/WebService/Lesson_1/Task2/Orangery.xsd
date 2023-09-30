@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Simple Types -->
+    <xs:simpleType name="ColorType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SizeType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TemperatureType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Complex Types -->
+    <xs:complexType name="VisualParametersType">
+        <xs:sequence>
+            <xs:element name="StemColor" type="ColorType"/>
+            <xs:element name="LeafColor" type="ColorType"/>
+            <xs:element name="Size" type="SizeType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="GrowingTipsType">
+        <xs:sequence>
+            <xs:element name="Temperature" type="TemperatureType"/>
+            <xs:element name="Light" type="xs:string"/>
+            <xs:element name="Watering" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PlantType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Soil" type="xs:string"/>
+            <xs:element name="Origin" type="xs:string"/>
+            <xs:element name="VisualParameters" type="VisualParametersType"/>
+            <xs:element name="GrowingTips" type="GrowingTipsType"/>
+            <xs:element name="Multiplying" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrangeryType">
+        <xs:sequence>
+            <xs:element type="PlantType" name="Plant" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">-->
+
+
+<!--  <xs:element name="Orangery" type="OrangeryType"/>-->
+
+
+<!--  <xs:complexType name="VisualParametersType">-->
+
+<!--    <xs:sequence>-->
+
+<!--      <xs:element name="StemColor">-->
+
+<!--        <xs:simpleType>-->
+
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Green"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Yellow"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="LeafColor">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Red"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Green"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="Size">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Medium"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Small"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--    </xs:sequence>-->
+<!--  </xs:complexType>-->
+<!--  <xs:complexType name="GrowingTipsType">-->
+<!--    <xs:sequence>-->
+<!--      <xs:element name="Temperature">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="20"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="15"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="Light">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Sun-loving"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Partial shade"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="Watering">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Once a week"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Twice a week"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--    </xs:sequence>-->
+<!--  </xs:complexType>-->
+<!--  <xs:complexType name="PlantType">-->
+<!--    <xs:sequence>-->
+<!--      <xs:element name="Name">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Rose"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Tulip"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="Soil">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Loamy"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Well-drained"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element name="Origin">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Europe"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Asia"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--      <xs:element type="VisualParametersType" name="VisualParameters"/>-->
+<!--      <xs:element type="GrowingTipsType" name="GrowingTips"/>-->
+<!--      <xs:element name="Multiplying">-->
+<!--        <xs:simpleType>-->
+<!--          <xs:restriction base="xs:string">-->
+<!--&lt;!&ndash;            <xs:enumeration value="Seeds"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <xs:enumeration value="Bulbs"/>&ndash;&gt;-->
+<!--          </xs:restriction>-->
+<!--        </xs:simpleType>-->
+<!--      </xs:element>-->
+<!--    </xs:sequence>-->
+<!--  </xs:complexType>-->
+<!--  <xs:complexType name="OrangeryType">-->
+<!--    <xs:sequence>-->
+<!--      <xs:element type="PlantType" name="Plant" maxOccurs="unbounded" minOccurs="0"/>-->
+<!--    </xs:sequence>-->
+<!--  </xs:complexType>-->
+<!--</xs:schema>-->

@@ -48,9 +48,9 @@ VALUES
 (12000.99, 'Frontand developer'),
 (22321.12, 'Java developer'),
 (5300.22 , 'JS developer'),
-(10000.00 , 'C# developer'),
+(10000.00 , 'SomeTask.C# developer'),
 (1500.02 , 'Project manager'),
-(12550.55, 'C++ developer');
+(12550.55, 'SomeTask.C++ developer');
 
 -- 3-тя містить інформацію про сімейне становище, дату народження та місце проживання.
 

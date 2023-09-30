@@ -19,10 +19,10 @@ INSERT INTO AUTOMOBILES                       -- ВІДКОРИГОВАНО 17/0
 (mark,model,engine_cap,price,max_speed)
 VALUES
 ('Mercedes','G55 AMG',5.5, 120000.12,   320),
-('Mercedes','C'      ,1.2, 8900.99,     230),
+('Mercedes','SomeTask.C'      ,1.2, 8900.99,     230),
 ('Mercedes','SL AMG', 7.2, 342000.01,   395),
 ('Mercedes','ML'     ,3.2, 55300.53,    200),
-('Mercedes','A'      ,0.9, 3800.99,     110),
+('Mercedes','SomeTask.A'      ,0.9, 3800.99,     110),
 ('Mercedes','CL'     ,3.2, 19000.00,    250);
 
 

@@ -1,13 +1,14 @@
+package SomeTask;
 
 class A {
     public void method() {
-        System.out.println("Class A: method()");
+        System.out.println("Class SomeTask.A: method()");
     }
 }
 class B extends A {
     @Override
     public void method() {
-        System.out.println("Class B: method()");
+        System.out.println("Class SomeTask.B: method()");
     }
 }
 class C extends B {
@@ -57,7 +58,7 @@ class C extends B {
 //    }
 //
 //
-//    public static void main(String[] args) {
+//    public static void Main(String[] args) {
 //
 ////        int res = perevircaMethod(-45, 5, 9);
 ////        System.out.println(res);

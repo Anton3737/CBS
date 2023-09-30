@@ -1,4 +1,4 @@
-package WebService.Lesson_1.Task2.entity;
+package WebService.Lesson_1.ComplexTask.entity;
 
 public class Orangery {
 

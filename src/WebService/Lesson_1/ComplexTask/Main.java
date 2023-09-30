@@ -1,7 +1,6 @@
-package WebService.Lesson_1.Task2;
+package WebService.Lesson_1.ComplexTask;
 
-import JavaAdvance.Leason1.Task3.ex_004_comparable.interface_comparator_with_anonymous.Car;
-import WebService.Lesson_1.Task2.entity.Orangery;
+import WebService.Lesson_1.ComplexTask.entity.Orangery;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -13,9 +12,6 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {

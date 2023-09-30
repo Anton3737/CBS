@@ -10,7 +10,7 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 
-public class OrangerySaxParser extends DefaultHandler {
+public class D0_NOT_USE_OrangerySaxParser extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
@@ -52,7 +52,7 @@ public class OrangerySaxParser extends DefaultHandler {
 
 
         if (file.exists()){
-            saxParser.parse(file, new OrangerySaxParser());
+            saxParser.parse(file, new D0_NOT_USE_OrangerySaxParser());
         }else {
             System.err.println("XML не спарсився ");
         }

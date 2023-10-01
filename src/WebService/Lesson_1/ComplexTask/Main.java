@@ -12,6 +12,8 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -23,7 +25,7 @@ public class Main {
 
         SAXObjHendler saxObjHendler = new SAXObjHendler();
 
-        File file = new File("/Users/macintosh/IdeaProjects/CBS/src/WebService/Lesson_1/Task2/Orangery.xml");
+        File file = new File("src/WebService/Lesson_1/ComplexTask/Orangery.xml");
         parser.parse(file, saxObjHendler);
 
         List<Orangery> plantsList = saxObjHendler.getPlantsList();
@@ -35,8 +37,6 @@ public class Main {
 
 
 
-
-
         System.out.println("All plants: ");
 
 
@@ -44,6 +44,15 @@ public class Main {
         System.out.println(tableForPage);
 
 
+
+
+        // Сортировка є але не працює як треба
+
+        Collections.sort(plantsList, new Comparator<Orangery>() {
+            public int compare(Orangery o1, Orangery o2) {
+                return o1.toString().compareTo(o2.toString());
+            }
+        });
 
 
         for (Orangery plant : plantsList) {
@@ -64,14 +73,16 @@ public class Main {
 
         try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File("/Users/macintosh/IdeaProjects/CBS/src/WebService/Lesson_1/Task2/Orangery.xslt")));
-            StreamSource streamSource = new StreamSource(new File("/Users/macintosh/IdeaProjects/CBS/src/WebService/Lesson_1/Task2/Orangery.xml"));
-            StreamResult streamResult = new StreamResult(new File("/Users/macintosh/IdeaProjects/CBS/src/WebService/Lesson_1/Task2/Orangery.html"));
+            Transformer transformer = transformerFactory.newTransformer(new StreamSource(new File("src/WebService/Lesson_1/ComplexTask/Orangery.xslt")));
+            StreamSource streamSource = new StreamSource(new File("src/WebService/Lesson_1/ComplexTask/Orangery.xml"));
+            StreamResult streamResult = new StreamResult(new File("src/WebService/Lesson_1/ComplexTask/Orangery.html"));
             transformer.transform(streamSource,streamResult);
 
         }catch (Exception e ){
             System.out.println(e.getMessage());
         }
+
+
 
     }
 }

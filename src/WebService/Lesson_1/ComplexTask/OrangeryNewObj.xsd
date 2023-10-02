@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Orangery" type="OrangeryType"/>
+  <xs:complexType name="NameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="code"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VisualParametersType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="StemColor"/>
+      <xs:element type="xs:string" name="LeafColor"/>
+      <xs:element type="xs:string" name="Size"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GrowingTipsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Temperature"/>
+      <xs:element type="xs:string" name="Light"/>
+      <xs:element type="xs:string" name="Watering"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlantType">
+    <xs:sequence>
+      <xs:element type="NameType" name="Name"/>
+      <xs:element type="xs:string" name="Soil"/>
+      <xs:element type="xs:string" name="Origin"/>
+      <xs:element type="VisualParametersType" name="VisualParameters"/>
+      <xs:element type="GrowingTipsType" name="GrowingTips"/>
+      <xs:element type="xs:string" name="Multiplying"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrangeryType">
+    <xs:sequence>
+      <xs:element type="PlantType" name="Plant"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

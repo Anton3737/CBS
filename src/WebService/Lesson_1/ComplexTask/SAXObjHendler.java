@@ -5,6 +5,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.*;
 
 public class SAXObjHendler extends DefaultHandler {
@@ -14,7 +16,7 @@ public class SAXObjHendler extends DefaultHandler {
     private Orangery currentPlants;
     private String atrr;
 
-    public SAXObjHendler() {
+    public SAXObjHendler() throws ParserConfigurationException, IOException, SAXException {
         plantsList = new ArrayList<>();
     }
 
@@ -26,6 +28,7 @@ public class SAXObjHendler extends DefaultHandler {
 
         if (attributes.getLength() > 0) {
             atrr = attributes.getValue(0);
+            currentPlants = new Orangery();
         }
 
     }
@@ -41,7 +44,6 @@ public class SAXObjHendler extends DefaultHandler {
                 currentPlants.setCode(value);
                 break;
             case "Name":
-                currentPlants = new Orangery();
                 currentPlants.setName(value);
                 break;
             case "Soil":
@@ -82,8 +84,25 @@ public class SAXObjHendler extends DefaultHandler {
         }
     }
 
-
     public List<Orangery> getPlantsList() {
         return plantsList;
     }
+
+}
+
+
+class SortByTemperature implements Comparator<Orangery> {
+
+    @Override
+    public int compare(Orangery o1, Orangery o2) {
+
+        if (Integer.parseInt(o1.getTemperature()) == Integer.parseInt(o1.getTemperature())) {
+            return 0;
+        }
+        if (Integer.parseInt(o1.getTemperature()) < Integer.parseInt(o1.getTemperature())) {
+            return -1;
+        } else
+            return 1;
+    }
+
 }

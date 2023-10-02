@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Orangery>
+    <Plant>
+        <Name code="#">Ромашка</Name>
+        <Soil>Звичайна Польова</Soil>
+        <Origin>УКРАЇНА</Origin>
+        <VisualParameters>
+            <StemColor>Зелений</StemColor>
+            <LeafColor>Білий</LeafColor>
+            <Size>маленька</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Любить СВІТЛО</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Комахами запилюється</Multiplying>
+    </Plant>
+
+
+    <Plant code="3">
+        <Name>Волошка Польова</Name>
+        <Soil>Звичайна</Soil>
+        <Origin>Україна</Origin>
+        <VisualParameters>
+            <StemColor>Зелена</StemColor>
+            <LeafColor>Блакитна</LeafColor>
+            <Size>маленька</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Світлолюбива</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Пилове</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="1">Соняшник</Name>
+        <Soil>Піщаний</Soil>
+        <Origin>Північна Америка</Origin>
+        <VisualParameters>
+            <StemColor>Жовтий</StemColor>
+            <LeafColor>Зелений</LeafColor>
+            <Size>Великий</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Любить сонце</Light>
+            <Watering>Два рази на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Зерна</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="4">Тюльпан</Name>
+        <Soil>Глинистий</Soil>
+        <Origin>Азія</Origin>
+        <VisualParameters>
+            <StemColor>Жовтий</StemColor>
+            <LeafColor>Фіолетовий</LeafColor>
+            <Size>Малий</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>18</Temperature>
+            <Light>Часткова тінь</Light>
+            <Watering>Кожен інший день</Watering>
+        </GrowingTips>
+        <Multiplying>Цибулини</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="6">Нарцис</Name>
+        <Soil>Торф'яний</Soil>
+        <Origin>Англія</Origin>
+        <VisualParameters>
+            <StemColor>Жовтий</StemColor>
+            <LeafColor>Зелений</LeafColor>
+            <Size>Середній</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>15</Temperature>
+            <Light>Повне сонце</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Цибулини</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="7">Лілія</Name>
+        <Soil>Піщаний</Soil>
+        <Origin>Китай</Origin>
+        <VisualParameters>
+            <StemColor>Білий</StemColor>
+            <LeafColor>Зелений</LeafColor>
+            <Size>Великий</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>22</Temperature>
+            <Light>Тінь</Light>
+            <Watering>Два рази на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Цибулини</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="8">Кактус</Name>
+        <Soil>Піщаний</Soil>
+        <Origin>Америки</Origin>
+        <VisualParameters>
+            <StemColor>Зелений</StemColor>
+            <LeafColor>Немає</LeafColor>
+            <Size>Малий</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>30</Temperature>
+            <Light>Повне сонце</Light>
+            <Watering>Раз на місяць</Watering>
+        </GrowingTips>
+        <Multiplying>Дитячі росточки</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="9">Орхідея</Name>
+        <Soil>Епіфітний</Soil>
+        <Origin>Тропічні регіони</Origin>
+        <VisualParameters>
+            <StemColor>Зелений</StemColor>
+            <LeafColor>Рожевий</LeafColor>
+            <Size>Малий</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Фільтроване сонце</Light>
+            <Watering>Два рази на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Ділення</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="10">Маргаритка</Name>
+        <Soil>Добре дренований</Soil>
+        <Origin>Північна Америка</Origin>
+        <VisualParameters>
+            <StemColor>Зелений</StemColor>
+            <LeafColor>Білий</LeafColor>
+            <Size>Середній</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>20</Temperature>
+            <Light>Любить сонце</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Зерна</Multiplying>
+    </Plant>
+
+    <Plant>
+        <Name code="11">Гвоздика</Name>
+        <Soil>Добре дренований</Soil>
+        <Origin>Середземномор'я</Origin>
+        <VisualParameters>
+            <StemColor>Зелений</StemColor>
+            <LeafColor>Червоний</LeafColor>
+            <Size>Середній</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>18</Temperature>
+            <Light>Повне сонце</Light>
+            <Watering>Кожен інший день</Watering>
+        </GrowingTips>
+        <Multiplying>Зерна</Multiplying>
+    </Plant>
+
+    <Plant code="13">
+        <Name>Волошка Польова</Name>
+        <Soil>Звичайна</Soil>
+        <Origin>Україна</Origin>
+        <VisualParameters>
+            <StemColor>Зелена</StemColor>
+            <LeafColor>Блакитна</LeafColor>
+            <Size>маленька</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Світлолюбива</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Пилове</Multiplying>
+    </Plant>
+    <Plant code="13">
+        <Name>Волошка Польова</Name>
+        <Soil>Звичайна</Soil>
+        <Origin>Україна</Origin>
+        <VisualParameters>
+            <StemColor>Зелена</StemColor>
+            <LeafColor>Блакитна</LeafColor>
+            <Size>маленька</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Світлолюбива</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Пилове</Multiplying>
+    </Plant>
+    <Plant code="13">
+        <Name>Волошка Польова</Name>
+        <Soil>Звичайна</Soil>
+        <Origin>Україна</Origin>
+        <VisualParameters>
+            <StemColor>Зелена</StemColor>
+            <LeafColor>Блакитна</LeafColor>
+            <Size>маленька</Size>
+        </VisualParameters>
+        <GrowingTips>
+            <Temperature>25</Temperature>
+            <Light>Світлолюбива</Light>
+            <Watering>Раз на тиждень</Watering>
+        </GrowingTips>
+        <Multiplying>Пилове</Multiplying>
+    </Plant>
+</Orangery>

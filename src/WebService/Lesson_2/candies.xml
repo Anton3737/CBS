@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factory>
+    <candy id="1">
+        <name>Шоколадний батончик</name>
+        <flavor>Шоколад</flavor>
+        <color>Коричневий</color>
+    </candy>
+    <candy id="2">
+        <name>Льодяник</name>
+        <flavor>Фруктовий</flavor>
+        <color>Різнобарвний</color>
+    </candy>
+    <candy id="3">
+        <name>Тверда цукерка</name>
+        <flavor>М'ятна</flavor>
+        <color>Червоний</color>
+    </candy>
+    <candy id="4">
+        <name>Мармеладні ведмедики</name>
+        <flavor>Різні</flavor>
+        <color>Різнобарвний</color>
+    </candy>
+    <candy id="5">
+        <name>Фасолька-драже</name>
+        <flavor>Різні</flavor>
+        <color>Різнобарвний</color>
+    </candy>
+    <candy id="6">
+        <name>Карамельний м'який млинець</name>
+        <flavor>Карамель</flavor>
+        <color>Золотистий</color>
+    </candy>
+    <candy id="7">
+        <name>Кришталева цукерка</name>
+        <flavor>Різні</flavor>
+        <color>Різнобарвний</color>
+    </candy>
+    <candy id="8">
+        <name>Тофі</name>
+        <flavor>Масляний тофі</flavor>
+        <color>Янтарний</color>
+    </candy>
+    <candy id="9">
+        <name>Перцевий пендель</name>
+        <flavor>Перець</flavor>
+        <color>Білий/Червоний</color>
+    </candy>
+    <candy id="10">
+        <name>Маршмеллоу-насолода</name>
+        <flavor>Ваніль</flavor>
+        <color>Білий</color>
+    </candy>
+    <candy id="11">
+        <name>Шипучка</name>
+        <flavor>Лимон</flavor>
+        <color>Жовтий</color>
+    </candy>
+    <candy id="12">
+        <name>M&amp;Ms</name>
+        <flavor>шоколад</flavor>
+        <color>Жовтий та Червоний</color>
+    </candy>
+<candy><name>Салов в шоколаді</name><flavor>шоколад</flavor><color>Білий</color></candy></factory>

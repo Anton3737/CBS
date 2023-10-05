@@ -18,7 +18,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XMLStreamException, TransformerException {
 
-
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
 
@@ -29,8 +28,6 @@ public class Main {
         parser.parse(file, saxObjHendler);
 
         List<Orangery> plantsList = saxObjHendler.getPlantsList();
-        System.out.println("Сортуємо по температурі: ");
-
 
         System.out.println("Виводимо спарсений файл");
 
@@ -65,16 +62,16 @@ public class Main {
         Orangery orangery = new Orangery();
 
 
-        orangery.setCode("17");
-        orangery.setName("Банан");
-        orangery.setSoil("Солодкий");
-        orangery.setOrigin("Ямайка");
+        orangery.setCode("18");
+        orangery.setName("Гортензія");
+        orangery.setSoil("Чорнозем");
+        orangery.setOrigin("США");
         orangery.setStemColor("Зелена");
-        orangery.setLeafColor("Жовтий");
+        orangery.setLeafColor("Рожева");
         orangery.setSize("Великий");
-        orangery.setTemperature("32");
-        orangery.setLight("Світлолюбивий");
-        orangery.setWatering("Два - Три рази на тиждень");
+        orangery.setTemperature("25");
+        orangery.setLight("Світлолюбива");
+        orangery.setWatering("Раз рази на тиждень");
         orangery.setMultiplying("Пилове розмноження");
 
         domHelperForAddObj.addPlant(orangery);

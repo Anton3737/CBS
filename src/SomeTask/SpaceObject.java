@@ -24,11 +24,11 @@ class PlanetTester {
 
     public String test(SpaceObject object) {
 
-        if (object.equals(Mars.class)){
+        if (object instanceof Mars) {
             return "planet";
         }
-        if (object.equals(Moon.class)){
-            return "Not planet";
+        if (object instanceof Moon) {
+            return "not planet";
         }
         return "err";
     }

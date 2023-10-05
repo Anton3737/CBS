@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Orangery>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Orangery>
     <Plant>
         <Name code="#">Ромашка</Name>
         <Soil>Звичайна Польова</Soil>
@@ -219,20 +218,4 @@
         </GrowingTips>
         <Multiplying>Пилове</Multiplying>
     </Plant>
-    <Plant code="17">
-        <Name>Банан</Name>
-        <Soil>Солодкий</Soil>
-        <Origin>Ямайка</Origin>
-        <VisualParameters>
-            <StemColor>Зелена</StemColor>
-            <LeafColor>Жовтий</LeafColor>
-            <Size>Великий</Size>
-        </VisualParameters>
-        <GrowingTips>
-            <Temperature>32</Temperature>
-            <Light>Світлолюбивий</Light>
-            <Watering>Два - Три рази на тиждень</Watering>
-        </GrowingTips>
-        <Multiplying>Пилове розмноження</Multiplying>
-    </Plant>
-</Orangery>
+<Plant code="18"><Name>Гортензія</Name><Soil>Чорнозем</Soil><Origin>США</Origin><VisualParameters><StemColor>Зелена</StemColor><LeafColor>Рожева</LeafColor><Size>Великий</Size></VisualParameters><GrowingTips><Temperature>25</Temperature><Light>Світлолюбива</Light><Watering>Раз рази на тиждень</Watering></GrowingTips><Multiplying>Пилове розмноження</Multiplying></Plant></Orangery>

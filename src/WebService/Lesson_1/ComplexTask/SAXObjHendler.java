@@ -87,7 +87,6 @@ public class SAXObjHendler extends DefaultHandler {
     public List<Orangery> getPlantsList() {
         return plantsList;
     }
-
 }
 
 
